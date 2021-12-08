@@ -3,7 +3,6 @@ from mathLib import MathLib
 from fireManager import FireManager
 import pygame
 
-
 class Player(Entity):
 
     tag = "Player"

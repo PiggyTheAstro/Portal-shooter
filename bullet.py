@@ -9,7 +9,6 @@ class Bullet(Entity):
     def __init__(self, position, scale, gameLoop, vector):
         super().__init__(position, scale, gameLoop)
         self.vector = vector
-        self.health = 2
         self.hostile = False
         self.moveSpeed = 350
         self.image = pygame.image.load_extended(
