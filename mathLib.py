@@ -1,4 +1,6 @@
 import math
+
+
 class MathLib():
 
     def getVectorMagnitude(vector):
@@ -11,6 +13,6 @@ class MathLib():
         vector[0] /= tempMagnitude
         vector[1] /= tempMagnitude
         return (vector[0], vector[1])
-    
+
     def getDistance(firstVec, secondVec):
         return [firstVec[0] - secondVec[0], firstVec[1] - secondVec[1]]

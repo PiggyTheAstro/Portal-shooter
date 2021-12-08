@@ -1,4 +1,6 @@
 import pygame
+
+
 class Entity():
 
     tag = "Entity"
@@ -6,14 +8,17 @@ class Entity():
     def __init__(self, position, scale, gameLoop):
         self.position = [position[0], position[1]]
         self.scale = [scale[0], scale[1]]
-        self.rect = pygame.Rect(self.position[0], self.position[1], self.scale[0], self.scale[1])
-        self.image = pygame.image.load_extended("resources/blank.png").convert_alpha()
+        self.rect = pygame.Rect(
+            self.position[0], self.position[1], self.scale[0], self.scale[1])
+        self.image = pygame.image.load_extended(
+            "resources/blank.png").convert_alpha()
         self.gameLoop = gameLoop
         self.gameLoop.addEntity(self)
         self.dead = False
 
     def update(self, deltaTime):
-        self.rect = pygame.Rect(self.position[0], self.position[1], self.scale[0], self.scale[1])
+        self.rect = pygame.Rect(
+            self.position[0], self.position[1], self.scale[0], self.scale[1])
         self.deltaTime = deltaTime
         self.wrapAround()
 
@@ -21,10 +26,10 @@ class Entity():
         wrapCount = 2
         if self.position[0] > 600:
             self.position[0] = 0 - self.scale[0]
-            
+
         elif self.position[0] + self.scale[0] < 0:
             self.position[0] = 600
-        
+
         else:
             wrapCount -= 1
 

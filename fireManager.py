@@ -1,6 +1,8 @@
 from bullet import Bullet
+
+
 class FireManager():
-    
+
     def __init__(self, fireRate, playerPos, gameLoop):
         self.fireRate = fireRate
         self.ticksPassed = 0

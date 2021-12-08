@@ -2,8 +2,10 @@ from entity import Entity
 from mathLib import MathLib
 from enemy import Enemy
 import random
+
+
 class Spawner(Entity):
-    
+
     def __init__(self, position, scale, gameLoop, player):
         super().__init__(position, scale, gameLoop)
         self.player = player

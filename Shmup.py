@@ -3,6 +3,8 @@ from game import Game
 from player import Player
 from enemy import Enemy
 from spawner import Spawner
+
+
 def main():
     gameLoop = Game()
     playerShip = Player((300, 300), (20, 20), gameLoop)
@@ -10,9 +12,9 @@ def main():
     playerShip.setInputManager(gameLoop.eventManager)
     loop(gameLoop)
 
+
 def loop(gameLoop):
     while gameLoop.running:
-        print(gameLoop.clock.get_fps())
         gameLoop.processEvents()
         gameLoop.update()
         gameLoop.render()
